@@ -1,0 +1,51 @@
+{% extends "geoids_ttpoly/base.html" %}
+{% load staticfiles %}
+
+
+{% block app_content %}
+ <center> <h1>GEOIDS</h1>
+  <h3>To calculate travel time, please follow the steps below. </h3></center>
+<br>
+
+
+
+  <ol>
+    <h5>
+
+  <li>
+  Place your point on the map.
+   <br>
+    <img src="{% static '/geoids_ttpoly/images/point.png' %}"width="500" height="400">
+</li>
+        <br>
+        <br>
+<li>
+  Click the "calculate" button.
+   <br>
+    <img src="{% static '/geoids_ttpoly/images/calc.png' %}"width="600" height="200">
+</li>
+        <br>
+        <br>
+<li>
+  Behold the travel time polygons.
+    <br>
+    <img src="{% static '/geoids_ttpoly/images/poly.png' %}"width="600" height="500">
+</li>
+      </h5>
+</ol>
+
+<br>
+
+<br>
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+
+{% endblock %}
+
+{% block app_actions %}
+
+{% endblock %}
+
+

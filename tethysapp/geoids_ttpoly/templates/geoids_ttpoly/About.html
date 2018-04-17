@@ -1,0 +1,60 @@
+{% extends "geoids_ttpoly/base.html" %}
+{% load staticfiles %}
+
+
+{% block app_content %}
+<center>
+    <h1><b>CEEN 514 Geoids</b></h1>
+
+ <img src="{% static '/geoids_ttpoly/images/team.jpg' %}"width="680" height="400">
+
+    </center>
+<h5>
+    <br>
+    We are The Geoids! Pictured from left to right: Tyler Mickelson, Luke Newey, Joseph Browning. This travel time
+    polygons app was developed as a term project for our masters class at Brigham Young University. Under the direction of
+    the prolific and most honorable Dr. Dan Pepper Ames, we learned how to code and produce this finished product over
+    the course of the semester.
+    <br>
+    <br>
+    <ul>
+        <li>Tyler worked on developing the geoprocessing model that runs the main functon of our app. This included finding
+            a Utah roadway network GIS database and then using it to create a model that calculates travel time polygons.</li>
+        <li>
+            Luke worked on the development of the rescaffolded app and the incorporation of the code from the previous app
+            along with the general structure and appearance of the app. He also was the keeper of the Github keys and was in charge of setting up and maintaining the repositories.
+        </li>
+        <li>
+            Joseph worked on the Javascript code to connect the map functions to the user interface. For example, when you
+            click "Calculate" the app would not have done anything without Joseph. He is also the Data Master of this
+            project; handling the necessary data to make this app possible.
+
+        </li>
+
+    </ul>
+
+</h5>
+ <br>
+    <br>
+
+<h6>
+    We want to acknowledge the <a target='_blank' href="https://gis.utah.gov/data/">Utah AGRC Data Portal</a> for providing the road network that is used in calculating the travel
+    time polygon. In this model each roadway and intersection was assigned an impedance value in minutes per unit length.
+    These values were assumed based off of the free flow speed of each roadway under normal traffic conditions. Therefore,
+    travel time polygons under congested conditions would likely be smaller than the results found in this app. More
+    details on the code and scaffolding of this app can be found on the
+    <a target='_blank' href="https://github.com/tdmick/geoids_ttpoly">Geoids github repository</a> .
+</h6>
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+
+{% endblock %}
+
+{% block app_actions %}
+
+{% endblock %}
+
+
